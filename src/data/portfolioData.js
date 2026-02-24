@@ -42,7 +42,13 @@ export const projects = [
         title: 'Notaris & PPAT Havis Akbar',
         category: 'Company Profile',
         link: 'https://notaristerdekat.com',
-        image: 'https://image.thum.io/get/width/800/crop/1000/noanimate/https://notaristerdekat.com',
+        image: '/images/notaris-terdekat.webp',
+    },
+    {
+        title: 'SuperApp Notaris',
+        category: 'Web App',
+        link: 'https://notaristerdekat.com',
+        image: '/images/NotarySuperApp.png',
     },
     {
         title: 'Kantorperizinan.com',
@@ -66,7 +72,7 @@ export const projects = [
         title: 'Urusinlegal.com',
         category: 'Landing Page',
         link: 'https://urusinlegal.com',
-        image: 'https://image.thum.io/get/width/800/crop/1000/noanimate/https://urusinlegal.com',
+        image: '/images/UrusinLegal.webp',
     },
     {
         title: 'PT Gentongmas',
