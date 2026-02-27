@@ -80,6 +80,18 @@ export const projects = [
         link: 'https://gentongmas.com',
         image: 'https://image.thum.io/get/width/800/crop/1000/noanimate/https://gentongmas.com',
     },
+    {
+        title: 'Perkumpulan P4KP',
+        category: 'Corporate Site',
+        link: 'https://www.p4kp-karangpapak.com/',
+        image: 'https://image.thum.io/get/width/800/crop/1000/noanimate/https://www.p4kp-karangpapak.com/',
+    },
+    {
+        title: 'LBH Gardanusa',
+        category: 'Corporate Site',
+        link: 'https://www.lbh-gardanusa.com/',
+        image: 'https://image.thum.io/get/width/800/crop/1000/noanimate/https://www.lbh-gardanusa.com/',
+    },
 ];
 
 export const techStack = [
