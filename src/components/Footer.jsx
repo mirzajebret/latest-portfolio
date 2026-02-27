@@ -15,7 +15,7 @@ const Footer = ({ scrollTo }) => {
                         href="mailto:rzamirza006@gmail.com"
                         className="inline-flex items-center gap-4 bg-[#222222] border border-white/10 px-8 py-5 rounded-full font-medium hover:bg-white hover:text-black transition-colors shrink-0"
                     >
-                        <span>Contact Me</span>
+                        <span>Email Me </span>
                         <ArrowRight size={20} />
                     </a>
                 </div>
@@ -62,10 +62,14 @@ const Footer = ({ scrollTo }) => {
 
                     {/* Email */}
                     <div>
-                        <h4 className="text-white font-medium mb-6">Email</h4>
-                        <p className="text-gray-400 text-sm leading-relaxed">
+                        <h4 className="text-white font-medium mb-6">Contact</h4>
+                        <a href="mailto:rzamirza006@gmail.com" className="text-gray-400 text-sm leading-relaxed">
                             rzamirza006@gmail.com
-                        </p>
+                        </a>
+                        <br />
+                        <a href="https://wa.me/621321245011" target="_blank" rel="noreferrer" className="text-gray-400 text-sm leading-relaxed">
+                            +62 813 2124 5011
+                        </a>
                     </div>
 
                     {/* Sitemap */}

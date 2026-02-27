@@ -6,7 +6,7 @@ export const skills = [
     },
     {
         name: 'Backend Dev',
-        desc: 'Python, Django, Laravel, MySQL, SQLite. Merancang arsitektur database dan API yang handal.',
+        desc: 'Python, Django, Laravel, MySQL, SQLite. Merancang arsitektur database dan API.',
         inverted: true,
     },
     {
@@ -21,19 +21,19 @@ export const experience = [
         role: 'IT Staff',
         company: 'Kantor Notaris & PPAT Havis Akbar',
         period: '2024 - Sekarang',
-        desc: 'Membangun Web App untuk automate invoice & Company Profile.',
+        desc: 'Membuat Website Kantor yang berhasil meningkatkan engagement kantor,  membuat tools internal kantor untuk meningkatkan efisiensi operasional.',
     },
     {
         role: 'Data Administrator (Intern)',
         company: 'PDAM Tirta Intan',
         period: '2023',
-        desc: 'Digitalisasi 100+ data & membangun Web client service.',
+        desc: 'Membangun Web client service.',
     },
     {
         role: 'Graphic Designer',
         company: "Gordon's Racing Company",
         period: '2019 - 2020',
-        desc: 'Desain visual & merchandise untuk industri otomotif.',
+        desc: 'Desain Produk Visual & Merchandise untuk industri otomotif.',
     },
 ];
 
