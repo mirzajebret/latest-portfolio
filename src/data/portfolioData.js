@@ -64,15 +64,15 @@ export const projects = [
     },
     {
         title: 'Pengacara Terdekat',
-        category: 'Directory Site',
+        category: 'Corporate Site',
         link: 'https://pengacaraterdekat.com',
         image: 'https://image.thum.io/get/width/800/crop/1000/noanimate/https://pengacaraterdekat.com',
     },
     {
         title: 'Urusinlegal.com',
-        category: 'Landing Page',
+        category: 'Legal Site',
         link: 'https://urusinlegal.com',
-        image: '/images/UrusinLegal.webp',
+        image: 'https://image.thum.io/get/width/800/crop/1000/noanimate/https://urusinlegal.com',
     },
     {
         title: 'PT Gentongmas',
