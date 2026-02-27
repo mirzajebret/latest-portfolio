@@ -11,7 +11,7 @@ const HeroSection = () => {
             >
                 <div className="flex flex-col md:flex-row justify-between items-end gap-10">
                     <h1 className="text-[5rem] sm:text-[8rem] md:text-[10vw] font-medium leading-[0.85] tracking-tighter">
-                        Web<br />Developer
+                        Mirza Alby<br />Assidiqie
                     </h1>
 
                     <div className="w-full md:w-auto flex flex-col items-end gap-8 relative z-10">
