@@ -7,9 +7,17 @@ const AboutSection = () => {
             <div className="inline-block border border-gray-300 rounded-full px-5 py-2 text-sm font-medium mb-10">
                 Tentang Saya
             </div>
+            <div className="w-full h-[300px] md:h-[600px] rounded-3xl mb-10 relative overflow-hidden group cursor-pointer flex items-center justify-center md:hidden block">
+                <img
+                    src="/images/portrait-mirza.jpg"
+                    alt="Coding"
+                    className="w-48 h-64 rounded-2xl"
+                />
+                <div className="absolute inset-0" />
 
+            </div>
             <div className="grid md:grid-cols-2 gap-16 items-start">
-                <h2 className="text-4xl md:text-6xl font-medium tracking-tight leading-tight max-w-xl">
+                <h2 className="text-3xl md:text-6xl font-medium tracking-tight leading-tight max-w-xl">
                     Building Systems. Driving Efficiency.
                 </h2>
 
@@ -31,18 +39,7 @@ const AboutSection = () => {
                 </div>
             </div>
 
-            {/* Full-width Image with Play Button */}
-            <div className="w-full h-[300px] md:h-[600px] bg-gray-200 rounded-3xl mt-20 relative overflow-hidden group cursor-pointer flex items-center justify-center">
-                <img
-                    src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2000&auto=format&fit=crop"
-                    alt="Coding"
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors" />
-                <div className="w-20 h-20 bg-black/50 backdrop-blur-md rounded-full text-white flex items-center justify-center absolute z-10 transition-transform group-hover:scale-110 border border-white/20">
-                    <Play fill="currentColor" className="ml-1" size={32} />
-                </div>
-            </div>
+
         </section>
     );
 };
