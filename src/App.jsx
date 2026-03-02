@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import AboutSection from './components/AboutSection';
@@ -6,6 +7,7 @@ import SkillsSection from './components/SkillsSection';
 import ExperienceSection from './components/ExperienceSection';
 import PortfolioSection from './components/PortfolioSection';
 import Footer from './components/Footer';
+import CVPage from './pages/CVPage';
 
 const Portfolio = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -56,4 +58,13 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+const App = () => {
+  return (
+    <Routes>
+      <Route path="/" element={<Portfolio />} />
+      <Route path="/cv" element={<CVPage />} />
+    </Routes>
+  );
+};
+
+export default App;

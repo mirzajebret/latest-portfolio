@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = ({ isScrolled, scrollTo }) => {
     return (
@@ -14,11 +15,13 @@ const Navbar = ({ isScrolled, scrollTo }) => {
                     className="font-bold text-2xl tracking-tighter cursor-pointer flex items-center gap-2"
                     onClick={() => scrollTo('home')}
                 >
-                    <img
-                        src="/images/logo-mirza-blk.webp"
-                        alt="Mirza Logo"
-                        className="h-10 w-auto object-contain"
-                    />
+                    <Link to="/">
+                        <img
+                            src="/images/logo-mirza-blk.webp"
+                            alt="Mirza Logo"
+                            className="h-10 w-auto object-contain"
+                        />
+                    </Link>
                 </div>
 
                 {/* Nav Links */}
@@ -35,6 +38,9 @@ const Navbar = ({ isScrolled, scrollTo }) => {
                     <button onClick={() => scrollTo('portfolio')} className="hover:text-gray-500 transition-colors">
                         Portfolio
                     </button>
+                    <Link to="/cv" className="hover:text-gray-500 transition-colors">
+                        CV
+                    </Link>
                 </div>
 
                 {/* CTA Button */}
