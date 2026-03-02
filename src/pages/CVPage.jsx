@@ -130,7 +130,7 @@ const CVPage = () => {
         /* Scale down on small screens so it fits without scrolling */
         @media (max-width: 740px) {
           .cv-doc {
-            transform: scale(calc((100vw - 16px) / 700));
+            transform: scale(0.5);
             margin-bottom: calc((700px - (700px * ((100vw - 16px) / 700))) * -1);
           }
           .cv-toolbar {
