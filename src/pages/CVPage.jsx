@@ -5,7 +5,7 @@ import { Phone, Mail, Linkedin, Github, Printer, ArrowLeft, Twitter, ArrowBigDow
 /* ─── DATA ─── */
 const cv = {
     name: 'Mirza Alby Assidiqie',
-    title: 'Web Developer & IT Staff',
+    title: 'Web Developer',
     bio: 'Saya seorang Entry Level Web Developer dengan latar belakang Diploma Teknik Informatika. Saya memiliki pengalaman membangun ekosistem digital dari nol, melakukan digitalisasi pekerjaan konvensional untuk meningkatkan efisiensi operasional, mengotomatisasi proses manual untuk mengurangi human error, dan membantu bisnis bertransformasi ke sistem berbasis web yang modern dan terintegrasi.',
     contacts: [
         { icon: 'phone', label: '+62 813 2124 5011', href: 'https://wa.me/6281321245011' },
@@ -21,7 +21,7 @@ const cv = {
             period: '2024 – Sekarang',
             points: [
                 'Membangun Website Kantor yang berhasil meningkatkan engagement dan visibilitas kantor.',
-                'Merancang dan mengembangkan tools internal kantor (SuperApp Notaris) untuk meningkatkan efisiensi operasional.',
+                'Merancang dan mengembangkan tools internal kantor untuk meningkatkan efisiensi operasional.',
                 'Mengotomatisasi proses manual pembuatan dokumen, mengurangi human error secara signifikan.',
             ],
         },
@@ -31,8 +31,8 @@ const cv = {
             location: 'Garut, Jawa Barat',
             period: '2023',
             points: [
-                'Membangun web client service untuk kebutuhan internal perusahaan.',
-                'Mengelola dan merapikan database pelanggan.',
+                'Membangun Website yang digunakan untuk media konsultasi dan layanan keluhan PDAM.',
+                'Data Entry dan pengelolaan database pelanggan.',
                 'Berkoordinasi dengan tim teknis untuk integrasi sistem.',
             ],
         },
@@ -51,24 +51,18 @@ const cv = {
     education: [
         {
             degree: 'D3 Teknik Informatika',
-            field: 'Rekayasa Perangkat Lunak',
-            school: 'Politeknik Negeri Bandung',
-            location: 'Bandung, Jawa Barat',
-            period: '2024',
-        },
-        {
-            degree: 'SMK Teknik Komputer & Jaringan',
-            field: 'Teknologi Informasi',
-            school: 'SMKN 2 Garut',
+            field: 'Teknik Informatika',
+            school: 'AMIK Garut',
             location: 'Garut, Jawa Barat',
-            period: '2021',
+            period: '2020 - 2023',
         },
+
     ],
     skillGroups: [
         {
             title: 'Frontend Development',
             left: ['React.js & Next.js', 'HTML5 / CSS3', 'Tailwind CSS', 'Responsive Design'],
-            right: ['JavaScript (ES6+)', 'Framer Motion', 'Figma & UI/UX Design', 'SEO Best Practices'],
+            right: ['JavaScript (ES6+)', 'Figma & UI/UX Design', 'SEO Best Practices'],
         },
         {
             title: 'Backend Development',
@@ -204,7 +198,7 @@ const CVPage = () => {
                     </div>
 
                     {/* ── PROFESSIONAL EXPERIENCE ── */}
-                    <SectionDivider label="Professional Experience" />
+                    <SectionDivider label="Work Experience" />
 
                     <div className="space-y-7">
                         {cv.experience.map((exp, i) => (
