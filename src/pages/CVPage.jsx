@@ -108,22 +108,47 @@ const SectionDivider = ({ label }) => (
 /* ─── PAGE ─── */
 const CVPage = () => {
     return (
-        <div className="min-h-screen bg-[#f1f1f1] py-8 px-4">
+        <div className="cv-outer min-h-screen bg-[#f1f1f1] py-8 px-2">
             <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@300;400;500;600&display=swap');
         .cv-page { font-family: 'Inter', sans-serif; color: #333; }
         .cv-name { font-family: 'Playfair Display', serif; }
         .role-title { font-family: 'Playfair Display', serif; font-style: italic; }
+
+        /* Force desktop document width on all screens */
+        .cv-doc {
+          width: 700px;
+          min-width: 700px;
+          transform-origin: top center;
+        }
+        .cv-outer {
+          overflow-x: hidden;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        /* Scale down on small screens so it fits without scrolling */
+        @media (max-width: 740px) {
+          .cv-doc {
+            transform: scale(calc((100vw - 16px) / 700));
+            margin-bottom: calc((700px - (700px * ((100vw - 16px) / 700))) * -1);
+          }
+          .cv-toolbar {
+            width: calc(100vw - 16px);
+          }
+        }
+
         @media print {
           body { background: white !important; }
           .no-print { display: none !important; }
-          .cv-doc { box-shadow: none !important; margin: 0 auto !important; border-radius: 0 !important; }
+          .cv-doc { box-shadow: none !important; margin: 0 auto !important; border-radius: 0 !important;
+                    transform: none !important; min-width: unset !important; width: 100% !important; }
           @page { margin: 10mm 15mm; }
         }
       `}</style>
 
             {/* Toolbar */}
-            <div className="no-print max-w-[700px] mx-auto flex justify-between items-center mb-4 px-1">
+            <div className="cv-toolbar no-print w-[700px] flex justify-between items-center mb-4 px-1">
                 <Link to="/" className="flex items-center gap-2 text-sm text-gray-500 hover:text-gray-800 transition-colors">
                     <ArrowLeft size={15} />
                     Kembali ke Portfolio
@@ -138,7 +163,7 @@ const CVPage = () => {
             </div>
 
             {/* CV Document */}
-            <div className="cv-doc cv-page max-w-[700px] mx-auto bg-white shadow-md rounded-sm">
+            <div className="cv-doc cv-page bg-white shadow-md rounded-sm">
                 <div className="px-14 py-12">
 
                     {/* ── HEADER ── */}

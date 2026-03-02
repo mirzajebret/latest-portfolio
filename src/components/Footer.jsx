@@ -1,5 +1,7 @@
 import React from 'react';
 import { ArrowRight, Github, Linkedin, Instagram, Twitter } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
 
 const Footer = ({ scrollTo }) => {
     return (
@@ -85,9 +87,9 @@ const Footer = ({ scrollTo }) => {
                             <button onClick={() => scrollTo('portfolio')} className="text-left hover:text-white transition-colors">
                                 Portfolio
                             </button>
-                            <a href="/cv" className="text-left hover:text-white transition-colors">
+                            <Link to="/cv" className="hover:text-gray-500 transition-colors">
                                 CV
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
