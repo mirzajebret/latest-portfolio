@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, Mail, Linkedin, Github, Printer, ArrowLeft, Twitter } from 'lucide-react';
+import { Phone, Mail, Linkedin, Github, Printer, ArrowLeft, Twitter, ArrowBigDown } from 'lucide-react';
 
 /* ─── DATA ─── */
 const cv = {
@@ -158,7 +158,7 @@ const CVPage = () => {
                     className="flex items-center gap-2 bg-[#222] text-white text-sm font-medium px-5 py-2 rounded-full hover:bg-gray-700 transition-colors"
                 >
                     <Printer size={14} />
-                    Print / Save PDF
+                    / <ArrowBigDown size={14} />
                 </button>
             </div>
 
