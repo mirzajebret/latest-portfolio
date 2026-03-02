@@ -8,7 +8,7 @@ const Footer = ({ scrollTo }) => {
 
                 {/* CTA Section */}
                 <div className="flex flex-col md:flex-row justify-between items-end gap-10 mb-32 pb-16 border-b border-white/20">
-                    <h2 className="text-[4rem] sm:text-[6rem] md:text-[8vw] font-medium leading-[0.9] tracking-tighter">
+                    <h2 className="text-[3rem] sm:text-[6rem] md:text-[8vw] font-medium leading-[0.9] tracking-tighter">
                         Let's Connect !
                     </h2>
                     <a
