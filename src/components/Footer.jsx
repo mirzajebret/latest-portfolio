@@ -85,6 +85,9 @@ const Footer = ({ scrollTo }) => {
                             <button onClick={() => scrollTo('portfolio')} className="text-left hover:text-white transition-colors">
                                 Portfolio
                             </button>
+                            <a href="/cv" className="text-left hover:text-white transition-colors">
+                                CV
+                            </a>
                         </div>
                     </div>
                 </div>
