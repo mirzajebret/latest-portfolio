@@ -54,7 +54,7 @@ export const projects = [
         title: 'Kantorperizinan.com',
         category: 'Web App',
         link: 'https://www.kantorperizinan.com',
-        image: 'https://image.thum.io/get/width/800/crop/1000/noanimate/https://www.kantorperizinan.com',
+        image: '/images/kantorperizinan.png',
     },
     {
         title: 'Notaris Mila Kumari',
@@ -72,7 +72,7 @@ export const projects = [
         title: 'Urusinlegal.com',
         category: 'Legal Site',
         link: 'https://urusinlegal.com',
-        image: 'https://image.thum.io/get/width/800/crop/1000/noanimate/https://urusinlegal.com',
+        image: '/images/UrusinLegal.webp',
     },
     {
         title: 'PT Gentongmas',
