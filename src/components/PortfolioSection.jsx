@@ -38,7 +38,7 @@ const PortfolioSection = () => {
                     viewport={{ once: true, margin: '-80px' }}
                     transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
                 >
-                    Eksplorasi solusi kreatif & digital saya
+                    Website(s)
                 </motion.h2>
                 <motion.p
                     className="text-gray-600 text-right hidden md:block max-w-xs justify-self-end"
@@ -47,7 +47,7 @@ const PortfolioSection = () => {
                     viewport={{ once: true, margin: '-80px' }}
                     transition={{ duration: 0.55, delay: 0.15 }}
                 >
-                    Koleksi proyek pilihan yang menunjukkan kemampuan saya dalam web development.
+                    berikut merupakan beberapa website statis & dinamis yang sudah saya develop.
                 </motion.p>
             </div>
 
