@@ -18,21 +18,33 @@ export const skills = [
 
 export const experience = [
     {
-        role: 'IT Staff',
-        company: 'Kantor Notaris & PPAT Havis Akbar',
-        period: '2024 - Sekarang',
+        role: 'SOCIAL MEDIA SPECIALIST - PART TIME',
+        company: 'Giok Scarf & Apparel',
+        period: 'April 2026 – Sekarang',
+        desc: 'Content planning, menentukan konsep konten (harian, mingguan campaign) & menyusun content calendar',
+    },
+    {
+        role: 'JASA LEGALITAS - OWNER',
+        company: 'UrusinLegal.com',
+        period: 'Maret 2024 - Sekarang',
+        desc: 'Menginisiasi dan mengembangkan platform website dinamis urusinlegal.com sebagai layanan digital untuk pengurusan legalitas badan usaha, sertifikasi produk (Halal, izin edar, BPOM), serta pendaftaran merek',
+    },
+    {
+        role: 'STAFF IT - FULL TIME',
+        company: 'Kantor Notaris & PPAT Havis Akbar, S.H., M.Kn - Garut, Jawa Barat',
+        period: 'Jul 2024 – Sekarang',
         desc: 'Membuat Website Kantor yang berhasil meningkatkan engagement kantor,  membuat tools internal kantor untuk meningkatkan efisiensi operasional.',
     },
     {
-        role: 'Data Administrator (Intern)',
-        company: 'PDAM Tirta Intan',
-        period: '2023',
+        role: 'DATA ENTRY DAN ADMINISTRATOR - INTERN',
+        company: 'PDAM Tirta Intan - Garut, Jawa Barat',
+        period: 'Jul 2023 – Agu 2023',
         desc: 'Membangun Web client service.',
     },
     {
-        role: 'Graphic Designer',
-        company: "Gordon's Racing Company",
-        period: '2019 - 2020',
+        role: 'DESAINER GRAFIS - FULL TIME',
+        company: "Gordon's Racing Company - Bandung, Jawa Barat",
+        period: 'Mei 2019 – Apr 2020',
         desc: 'Desain Produk Visual & Merchandise untuk industri otomotif.',
     },
 ];
@@ -91,6 +103,131 @@ export const projects = [
         category: 'Corporate Site',
         link: 'https://www.lbh-gardanusa.com/',
         image: '/images/lbh-gardanusa.webp',
+    },
+];
+
+export const posters = [
+    // Giok series
+    {
+        title: 'Giok — Poster 1',
+        category: 'Social Media',
+        client: 'Giok',
+        image: '/images/posters/giok/1.PNG',
+    },
+    {
+        title: 'Giok — Poster 1.2',
+        category: 'Social Media',
+        client: 'Giok',
+        image: '/images/posters/giok/1.2.PNG',
+    },
+    {
+        title: 'Giok — Poster 2',
+        category: 'Social Media',
+        client: 'Giok',
+        image: '/images/posters/giok/2.PNG',
+    },
+    {
+        title: 'Giok — Poster 2.2',
+        category: 'Social Media',
+        client: 'Giok',
+        image: '/images/posters/giok/2.2.PNG',
+    },
+    {
+        title: 'Giok — Poster 2.3',
+        category: 'Social Media',
+        client: 'Giok',
+        image: '/images/posters/giok/2.3.PNG',
+    },
+    {
+        title: 'Giok — Poster 3',
+        category: 'Social Media',
+        client: 'Giok',
+        image: '/images/posters/giok/3.PNG',
+    },
+    {
+        title: 'Giok — Poster 4',
+        category: 'Social Media',
+        client: 'Giok',
+        image: '/images/posters/giok/4.PNG',
+    },
+    {
+        title: 'Giok — Poster 5',
+        category: 'Social Media',
+        client: 'Giok',
+        image: '/images/posters/giok/5.PNG',
+    },
+    {
+        title: 'Giok — Poster 6',
+        category: 'Social Media',
+        client: 'Giok',
+        image: '/images/posters/giok/6.PNG',
+    },
+    {
+        title: 'Giok — Poster 7',
+        category: 'Social Media',
+        client: 'Giok',
+        image: '/images/posters/giok/7.PNG',
+    },
+    {
+        title: 'Giok — Poster 8',
+        category: 'Social Media',
+        client: 'Giok',
+        image: '/images/posters/giok/8.PNG',
+    },
+    {
+        title: 'Giok — Poster 8.2',
+        category: 'Social Media',
+        client: 'Giok',
+        image: '/images/posters/giok/8.2.PNG',
+    },
+    {
+        title: 'Giok — Poster 9',
+        category: 'Social Media',
+        client: 'Giok',
+        image: '/images/posters/giok/9.PNG',
+    },
+    // Kantor Perizinan series
+    {
+        title: 'Kantorperizinan — Banner 1',
+        category: 'Banner',
+        client: 'Kantorperizinan',
+        image: '/images/posters/kantorperizinan/1.jpg',
+    },
+    {
+        title: 'Kantorperizinan — Banner 2',
+        category: 'Banner',
+        client: 'Kantorperizinan',
+        image: '/images/posters/kantorperizinan/2.jpg',
+    },
+    {
+        title: 'Kantorperizinan — Banner 3',
+        category: 'Banner',
+        client: 'Kantorperizinan',
+        image: '/images/posters/kantorperizinan/3.jpg',
+    },
+    {
+        title: 'Kantorperizinan — Banner 4',
+        category: 'Banner',
+        client: 'Kantorperizinan',
+        image: '/images/posters/kantorperizinan/4.jpg',
+    },
+    {
+        title: 'Kantorperizinan — Banner 5',
+        category: 'Banner',
+        client: 'Kantorperizinan',
+        image: '/images/posters/kantorperizinan/5.jpg',
+    },
+    {
+        title: 'Kantorperizinan — Banner 6',
+        category: 'Banner',
+        client: 'Kantorperizinan',
+        image: '/images/posters/kantorperizinan/6.jpg',
+    },
+    {
+        title: 'Kantorperizinan — Banner 7',
+        category: 'Banner',
+        client: 'Kantorperizinan',
+        image: '/images/posters/kantorperizinan/7.jpg',
     },
 ];
 
