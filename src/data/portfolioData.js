@@ -60,13 +60,13 @@ export const projects = [
         title: 'Notaris Mila Kumari',
         category: 'Static Site',
         link: 'https://notaristerdekat.id',
-        image: 'https://image.thum.io/get/width/800/crop/1000/noanimate/https://notaristerdekat.id',
+        image: '/images/notaris-mila.webp',
     },
     {
         title: 'Pengacara Terdekat',
         category: 'Corporate Site',
         link: 'https://pengacaraterdekat.com',
-        image: 'https://image.thum.io/get/width/800/crop/1000/noanimate/https://pengacaraterdekat.com',
+        image: '/images/pengacara-terdekat.webp',
     },
     {
         title: 'Urusinlegal.com',
@@ -78,19 +78,19 @@ export const projects = [
         title: 'PT Gentongmas',
         category: 'Corporate Site',
         link: 'https://gentongmas.com',
-        image: 'https://image.thum.io/get/width/800/crop/1000/noanimate/https://gentongmas.com',
+        image: '/images/gentong-mas.webp',
     },
     {
         title: 'Perkumpulan P4KP',
         category: 'Corporate Site',
         link: 'https://www.p4kp-karangpapak.com/',
-        image: 'https://image.thum.io/get/width/800/crop/1000/noanimate/https://www.p4kp-karangpapak.com/',
+        image: '/images/p4kp.webp',
     },
     {
         title: 'LBH Gardanusa',
         category: 'Corporate Site',
         link: 'https://www.lbh-gardanusa.com/',
-        image: 'https://image.thum.io/get/width/800/crop/1000/noanimate/https://www.lbh-gardanusa.com/',
+        image: '/images/lbh-gardanusa.webp',
     },
 ];
 
