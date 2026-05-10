@@ -8,6 +8,8 @@ import ExperienceSection from './components/ExperienceSection';
 import PortfolioSection from './components/PortfolioSection';
 import Footer from './components/Footer';
 import CVPage from './pages/CVPage';
+import PortfolioWebsitePage from './pages/PortfolioWebsitePage';
+import PortfolioPostersPage from './pages/PortfolioPostersPage';
 
 const Portfolio = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -63,6 +65,8 @@ const App = () => {
     <Routes>
       <Route path="/" element={<Portfolio />} />
       <Route path="/cv" element={<CVPage />} />
+      <Route path="/portfolio/website" element={<PortfolioWebsitePage />} />
+      <Route path="/portfolio/posters" element={<PortfolioPostersPage />} />
     </Routes>
   );
 };
