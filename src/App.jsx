@@ -6,6 +6,7 @@ import AboutSection from './components/AboutSection';
 import SkillsSection from './components/SkillsSection';
 import ExperienceSection from './components/ExperienceSection';
 import PortfolioSection from './components/PortfolioSection';
+import CompanyProfileSection from './components/CompanyProfileSection';
 import Footer from './components/Footer';
 import CVPage from './pages/CVPage';
 import PortfolioWebsitePage from './pages/PortfolioWebsitePage';
@@ -54,6 +55,7 @@ const Portfolio = () => {
       <SkillsSection />
       <ExperienceSection />
       <PortfolioSection />
+      <CompanyProfileSection />
       <Footer scrollTo={scrollTo} />
 
     </div>
