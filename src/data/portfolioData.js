@@ -1,17 +1,37 @@
 export const skills = [
     {
         name: 'Frontend Dev',
-        desc: 'React, NextJS, TailwindCSS, HTML5/CSS3. Membangun antarmuka yang responsif dan interaktif.',
+        desc: 'Membangun antarmuka yang responsif dan interaktif.',
+        icons: [
+            { name: 'React', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg' },
+            { name: 'NextJS', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg' },
+            { name: 'TailwindCSS', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg' },
+            { name: 'HTML5', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg' },
+            { name: 'CSS3', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg' },
+        ],
         inverted: false,
     },
     {
         name: 'Backend Dev',
-        desc: 'Python, Django, Laravel, MySQL, SQLite. Merancang arsitektur database dan API.',
+        desc: 'Merancang arsitektur database dan API.',
+        icons: [
+            { name: 'Python', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg' },
+            { name: 'Django', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg' },
+            { name: 'Laravel', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg' },
+            { name: 'MySQL', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg' },
+            { name: 'SQLite', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg' },
+        ],
         inverted: true,
     },
     {
         name: 'Tools & Design',
-        desc: 'Git, Figma, CorelDraw, VS Code. Menggabungkan desain fungsional dengan alur kerja yang efisien.',
+        desc: 'Menggabungkan desain fungsional dengan alur kerja yang efisien.',
+        icons: [
+            { name: 'Git', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg' },
+            { name: 'Figma', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg' },
+            { name: 'VS Code', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg' },
+            { name: 'CorelDraw', url: 'https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/coreldraw/default.svg' },
+        ],
         inverted: false,
     },
 ];

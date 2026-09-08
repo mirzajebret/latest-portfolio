@@ -88,9 +88,28 @@ const SkillsSection = () => {
                         >
                             <div>
                                 <h3 className="text-2xl font-medium mb-4">{skill.name}</h3>
-                                <p className={`text-sm leading-relaxed ${skill.inverted ? 'text-gray-400' : 'text-gray-600'}`}>
+                                <p className={`text-sm leading-relaxed mb-6 ${skill.inverted ? 'text-gray-400' : 'text-gray-600'}`}>
                                     {skill.desc}
                                 </p>
+                                {skill.icons && (
+                                    <div className="flex flex-wrap gap-4">
+                                        {skill.icons.map((icon, i) => (
+                                            icon.url ? (
+                                                <img 
+                                                    key={i} 
+                                                    src={icon.url} 
+                                                    alt={icon.name} 
+                                                    title={icon.name}
+                                                    className="w-8 h-8 md:w-10 md:h-10 hover:scale-110 transition-transform cursor-pointer" 
+                                                />
+                                            ) : (
+                                                <div key={i} title={icon.name} className={`flex items-center justify-center px-3 py-1 rounded-full text-xs font-medium border ${skill.inverted ? 'border-gray-700 text-gray-300' : 'border-gray-300 text-gray-700'}`}>
+                                                    {icon.name}
+                                                </div>
+                                            )
+                                        ))}
+                                    </div>
+                                )}
                             </div>
                             <div className="flex justify-end">
                                 <ArrowRight size={28} className={skill.inverted ? 'text-white' : 'text-[#111111]'} />
