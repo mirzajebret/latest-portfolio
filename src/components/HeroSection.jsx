@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
-import { techStack } from '../data/portfolioData';
+import { Greetings, techStack } from '../data/portfolioData';
 
 // Animation variants
 const containerVariants = {
@@ -119,10 +119,10 @@ const HeroSection = () => {
                                                             shouldReduceMotion
                                                                 ? { duration: 0.15 }
                                                                 : {
-                                                                      duration: 0.35,
-                                                                      delay: i * 0.03,
-                                                                      ease: [0.22, 1, 0.36, 1],
-                                                                  }
+                                                                    duration: 0.35,
+                                                                    delay: i * 0.03,
+                                                                    ease: [0.22, 1, 0.36, 1],
+                                                                }
                                                         }
                                                     >
                                                         {word}
@@ -137,9 +137,8 @@ const HeroSection = () => {
                             <img
                                 src="/images/portrait-mirza.png"
                                 alt="Mirza Alby Assidiqie"
-                                className={`relative z-10 w-full h-auto object-contain drop-shadow-2xl cursor-pointer transition-all duration-500 ease-out ${
-                                    isRevealed ? 'grayscale-0 scale-[1.02]' : 'grayscale'
-                                }`}
+                                className={`relative z-10 w-full h-auto object-contain drop-shadow-2xl cursor-pointer transition-all duration-500 ease-out ${isRevealed ? 'grayscale-0 scale-[1.06]' : 'grayscale'
+                                    }`}
                             />
                         </motion.div>
 
@@ -147,7 +146,7 @@ const HeroSection = () => {
                             className="max-w-[280px] text-right text-sm md:text-base text-gray-700 font-medium"
                             variants={fadeUp}
                         >
-                            Hai, Saya Mirza. Web Developer yang berfokus pada perancangan logika dan estetika antarmuka digital.
+                            Hai, Selamat Datang di Web Portfolio Saya.
                         </motion.p>
                     </div>
                 </motion.div>
@@ -165,7 +164,7 @@ const HeroSection = () => {
                 <div className="pointer-events-none absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-white to-transparent z-10" />
 
                 <div className="animate-marquee [animation-play-state:running] hover:[animation-play-state:paused]">
-                    {[...techStack, ...techStack, ...techStack].map((tech, i) => (
+                    {[...Greetings, ...Greetings, ...Greetings].map((tech, i) => (
                         <span key={i} className="inline-flex items-center gap-3 text-lg font-medium text-gray-400 mr-12">
                             <span className="w-2 h-2 rounded-full bg-gray-300 flex-shrink-0"></span>
                             {tech}

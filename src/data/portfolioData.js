@@ -261,3 +261,17 @@ export const techStack = [
     'Figma',
     'Git',
 ];
+export const Greetings = [
+    'Halo',
+    'Bonjour',
+    'Ciao',
+    'Annyeong',
+    'Olá',
+    'Ahoj',
+    'Merhaba',
+    'Kumusta',
+    'Konnichiwa',
+    'Namaste',
+    'Hallo',
+    'Nǐ hǎo',
+];
