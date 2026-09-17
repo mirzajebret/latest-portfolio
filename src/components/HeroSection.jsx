@@ -98,27 +98,36 @@ const HeroSection = () => {
                                                 i * (FAN_SPREAD / (GREETINGS.length - 1));
                                             const radius = FAN_RADIUS + (i % 3) * 14;
                                             return (
-                                                <motion.span
+                                                // Outer span: fixed fan position only (rotate + push
+                                                // out along that angle). Framer never touches this
+                                                // element, so its transform can't get clobbered.
+                                                <span
                                                     key={word}
-                                                    className="absolute left-0 top-0 origin-center whitespace-nowrap text-[11px] lg:text-xs font-medium text-neutral-600"
+                                                    className="absolute left-0 top-0"
                                                     style={{
                                                         transform: `translate(-50%, -50%) rotate(${angle}deg) translateY(-${radius}px)`,
                                                     }}
-                                                    initial={{ opacity: 0, scale: 0.4 }}
-                                                    animate={{ opacity: 1, scale: 1 }}
-                                                    exit={{ opacity: 0, scale: 0.4 }}
-                                                    transition={
-                                                        shouldReduceMotion
-                                                            ? { duration: 0.15 }
-                                                            : {
-                                                                  duration: 0.35,
-                                                                  delay: i * 0.03,
-                                                                  ease: [0.22, 1, 0.36, 1],
-                                                              }
-                                                    }
                                                 >
-                                                    {word}
-                                                </motion.span>
+                                                    {/* Inner motion.span: only handles the
+                                                        appear/disappear animation (opacity + scale) */}
+                                                    <motion.span
+                                                        className="block whitespace-nowrap text-[11px] lg:text-xs font-medium text-neutral-600"
+                                                        initial={{ opacity: 0, scale: 0.4 }}
+                                                        animate={{ opacity: 1, scale: 1 }}
+                                                        exit={{ opacity: 0, scale: 0.4 }}
+                                                        transition={
+                                                            shouldReduceMotion
+                                                                ? { duration: 0.15 }
+                                                                : {
+                                                                      duration: 0.35,
+                                                                      delay: i * 0.03,
+                                                                      ease: [0.22, 1, 0.36, 1],
+                                                                  }
+                                                        }
+                                                    >
+                                                        {word}
+                                                    </motion.span>
+                                                </span>
                                             );
                                         })}
                                 </AnimatePresence>
