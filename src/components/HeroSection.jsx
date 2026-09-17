@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react';
+import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import { techStack } from '../data/portfolioData';
 
 // Animation variants
@@ -31,13 +31,25 @@ const fadeUp = {
     },
 };
 
+// "Halo" fan — one greeting per language, fanned out around the portrait on hover.
+// Tweak GREETINGS / FAN_SPREAD / FAN_RADIUS to change how wide or far it opens.
+const GREETINGS = [
+    'Halo', 'Bonjour', 'Ciao', 'Annyeong', 'Olá', 'Ahoj',
+    'Merhaba', 'Kumusta', 'Konnichiwa', 'Namaste', 'Hallo', 'Nǐ hǎo',
+];
+const FAN_SPREAD = 130; // total arc, in degrees
+const FAN_RADIUS = 118; // base distance from pivot, in px
+
 const HeroSection = () => {
+    const [isRevealed, setIsRevealed] = useState(false);
+    const shouldReduceMotion = useReducedMotion();
+
     return (
         <>
             {/* --- HERO SECTION --- */}
             <section
                 id="home"
-                className="pt-32 md:pt-48 pb-12 px-6 md:px-12 max-w-[1400px] mx-auto relative"
+                className="pt-32 md:pt-48 pb-12 px-6 md:px-12 max-w-[1400px] mx-auto relative overflow-hidden"
             >
                 <motion.div
                     className="flex flex-col md:flex-row justify-between items-end gap-10"
@@ -46,9 +58,9 @@ const HeroSection = () => {
                     animate="visible"
                 >
                     {/* Big Name - word by word */}
-                    <div className="overflow-hidden">
+                    <div className="overflow-hidden relative z-0">
                         <motion.h1
-                            className="text-[5rem] sm:text-[8rem] md:text-[10vw] font-medium leading-[0.85] tracking-tighter"
+                            className="text-[5rem] sm:text-[8rem] md:text-[10vw] font-medium leading-[0.85] tracking-tighter text-neutral-900"
                             variants={containerVariants}
                         >
                             {["Mirza", "Alby", "Assidiqie"].map((word, i) => (
@@ -64,18 +76,61 @@ const HeroSection = () => {
                         </motion.h1>
                     </div>
 
-                    <div className="w-full md:w-auto flex flex-col items-end gap-8 relative z-10">
-                        {/* Portrait Image */}
+                    <div className="w-full md:w-auto flex flex-col items-end gap-8 relative z-10 md:-ml-20 lg:-ml-32">
+                        {/* Portrait — cutout, no frame. Hover/tap fans out greetings and lifts the grayscale. */}
                         <motion.div
-                            className="w-48 h-64 bg-gray-200 rounded-2xl overflow-hidden hidden md:block"
+                            className="relative hidden md:flex justify-center w-56 lg:w-64"
                             variants={fadeUp}
-                            whileHover={{ scale: 1.03, rotate: -1 }}
-                            transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+                            onMouseEnter={() => setIsRevealed(true)}
+                            onMouseLeave={() => setIsRevealed(false)}
+                            onClick={() => setIsRevealed((v) => !v)}
                         >
+                            {/* Fan of greetings, pivoting from just above the portrait's head */}
+                            <div
+                                className="absolute left-1/2 top-[14%] w-0 h-0 pointer-events-none"
+                                aria-hidden="true"
+                            >
+                                <AnimatePresence>
+                                    {isRevealed &&
+                                        GREETINGS.map((word, i) => {
+                                            const angle =
+                                                -FAN_SPREAD / 2 +
+                                                i * (FAN_SPREAD / (GREETINGS.length - 1));
+                                            const radius = FAN_RADIUS + (i % 3) * 14;
+                                            return (
+                                                <motion.span
+                                                    key={word}
+                                                    className="absolute left-0 top-0 origin-center whitespace-nowrap text-[11px] lg:text-xs font-medium text-neutral-600"
+                                                    style={{
+                                                        transform: `translate(-50%, -50%) rotate(${angle}deg) translateY(-${radius}px)`,
+                                                    }}
+                                                    initial={{ opacity: 0, scale: 0.4 }}
+                                                    animate={{ opacity: 1, scale: 1 }}
+                                                    exit={{ opacity: 0, scale: 0.4 }}
+                                                    transition={
+                                                        shouldReduceMotion
+                                                            ? { duration: 0.15 }
+                                                            : {
+                                                                  duration: 0.35,
+                                                                  delay: i * 0.03,
+                                                                  ease: [0.22, 1, 0.36, 1],
+                                                              }
+                                                    }
+                                                >
+                                                    {word}
+                                                </motion.span>
+                                            );
+                                        })}
+                                </AnimatePresence>
+                            </div>
+
+                            {/* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions */}
                             <img
-                                src="/images/portrait-mirza.jpg"
-                                alt="Portrait"
-                                className="w-full h-full object-cover grayscale"
+                                src="/images/portrait-mirza.png"
+                                alt="Mirza Alby Assidiqie"
+                                className={`relative z-10 w-full h-auto object-contain drop-shadow-2xl cursor-pointer transition-all duration-500 ease-out ${
+                                    isRevealed ? 'grayscale-0 scale-[1.02]' : 'grayscale'
+                                }`}
                             />
                         </motion.div>
 
@@ -91,12 +146,16 @@ const HeroSection = () => {
 
             {/* --- TECH STACK MARQUEE --- */}
             <motion.div
-                className="py-6 border-y border-gray-200 overflow-hidden bg-white whitespace-nowrap mt-12"
+                className="relative py-6 border-y border-gray-200 overflow-hidden bg-white whitespace-nowrap mt-12"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.9, duration: 0.6 }}
             >
-                <div className="animate-marquee">
+                {/* Edge fade so the marquee text doesn't cut off abruptly */}
+                <div className="pointer-events-none absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-white to-transparent z-10" />
+                <div className="pointer-events-none absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-white to-transparent z-10" />
+
+                <div className="animate-marquee [animation-play-state:running] hover:[animation-play-state:paused]">
                     {[...techStack, ...techStack, ...techStack].map((tech, i) => (
                         <span key={i} className="inline-flex items-center gap-3 text-lg font-medium text-gray-400 mr-12">
                             <span className="w-2 h-2 rounded-full bg-gray-300 flex-shrink-0"></span>
